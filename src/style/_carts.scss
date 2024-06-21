@@ -20,7 +20,7 @@
     }
   }
   &__item{
-    width: 440px;
+    width: 440px !important;
     position: relative;
     height: 590px;
     background-color: $ligth;
@@ -35,7 +35,7 @@
       }
     }
     @media(max-width:700px){
-      width: 295px;
+      width: 295px !important;;
       position: relative;
       height: 350px;
       border-radius: 10px;
@@ -46,7 +46,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    bottom: -100%;
+    bottom: -101%;
     @include transition;
     img{
       width: 100%;
@@ -75,7 +75,7 @@
       line-height: 1em;
       text-align: center;
       font-weight: 300;
-      margin-top: 28px;
+      margin-top: 10px;
       @include transition;
       @media(max-width:700px){
         font-size: 70px;

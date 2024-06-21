@@ -1,0 +1,80 @@
+.review{
+  padding: 0 40px;
+  @media(max-width:1600px){
+    padding: 0 20px;
+  }
+  &__wrapper{
+    margin: 0 auto;
+    margin-top: 150px;
+    max-width: 1840px;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(243, 238, 232, 1);
+    border-radius: 20px;
+  }
+  &__icon{
+    height: 56px;
+    width: auto;
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    @media(max-width:1200px){
+      height: 35px;
+    }
+  }
+  &__title{
+    margin-top: 20px;
+    @include sectionTitle;
+    text-transform: uppercase;
+    @media(max-width:1200px){
+      margin-top: 10px;
+    }
+  }
+  &__list{
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  &__item{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 400px;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1em;
+    }
+    span{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18.8px;
+    }
+  }
+  &__star{
+    margin-top: 16px;
+    width: 78px;
+    background-image: url('../img/star.svg');
+    height: 13px;
+  }
+  &__rating{
+    display: block;
+    width: 80%;
+    background-image: url('../img/gold.svg');
+    height: 100%;
+  }
+  &__text{
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 20.8px;
+    text-align: left;
+  }
+}

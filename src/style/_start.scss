@@ -15,7 +15,6 @@
     position: relative;
     &_wrap{
     height: 100%;
-    display: flex;
     position: relative;
       .slick-track{
         height: 100% !important;
@@ -31,7 +30,7 @@
   }
   &__slide{
     width: 100vw;
-    height: 100%;
+    height: 1000px;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 165px;

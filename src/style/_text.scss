@@ -6,7 +6,7 @@
   &__wrapper{
     margin: 0 auto;
     max-width: 1840px;
-    margin-top: 33px;
+    margin-top: 28px;
     background-color: $ligth;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@
       border-radius: 10px;
       padding: 45px 15px;
       padding-bottom: 60px;
+      margin-top: 27px;
     }
   }
   &__title{
@@ -37,44 +38,44 @@
   &__img{
     position: absolute;
     width: 90px;
-    height: 90px;
+    height: auto;
     @media(max-width:700px){
       width: 45px;
-      height: 45px;
+      height: auto;
     }
     &_left-top{
-      top: 5px;
+      top: 25px;
       left: 5px;
       transform: rotate(135deg);
       @media(max-width:700px){
-        top: -3px;
-        left: -3px;
+        top: 6px;
+        left: -4px;
       }
     }
     &_left-bottom{
-      bottom: 0px;
+      bottom: 25px;
       left: 5px;
       transform: rotate(45deg);
       @media(max-width:700px){
-        bottom: -5px;
-        left: -3px;
+        bottom: 6px;
+        left: -4px;
       }
     }
     &_rigth-bottom{
-      bottom: 0px;
+      bottom: 25px;
       right: 5px;
       transform: rotate(-45deg);
       @media(max-width:700px){
-        bottom: -3px;
+        bottom: 6px;
         right: -3px;
       }
     }
     &_rigth-top{
-      top: 5px;
+      top: 25px;
       right: 5px;
       transform: rotate(-135deg);
       @media(max-width:700px){
-        top: -5px;
+        top: 6px;
         right: -5px;
       }
     }

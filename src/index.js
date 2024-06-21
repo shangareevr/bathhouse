@@ -49,3 +49,37 @@ $('.news__slider').slick({
   centerMode:false,
   slidesToShow:1,
 });
+
+
+$('.gallery__big_wrap').slick({
+  speed: 1000,
+  fade: true,
+  infinite:true,
+  prevArrow:'.gallery__big_prev',
+  nextArrow:'.gallery__big_next',
+  cssEase: 'linear',
+  variableWidth:false,
+  centerMode:false,
+  slidesToShow:1,
+  asNavFor:'.gallery__small_wrap'
+});
+
+var slide = $('.gallery__small_wrap').slick({
+  speed: 1000,
+  fade: false,
+  cssEase: 'linear',
+  autoplay: false,
+  arrows: false,
+  infinite:true,
+  variableWidth:true,
+  centerMode:false,
+  centerPadding:0,
+  slidesToShow:1,
+  focusOnSelect:true,
+  asNavFor:'.gallery__big_wrap'
+});
+$('.gallery__item').not(':first').hide();
+$('.gallery__small_wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  $('.gallery__item').hide();
+  $('.gallery__item').eq(currentSlide).show();
+});
