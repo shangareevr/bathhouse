@@ -205,6 +205,11 @@
     @media(max-width:1100px){
       display: none;
     }
+    @media(hover:hover){
+      &:hover{
+        background-color: #CAA769;
+      }
+    }
   }
   &__list{
     position: absolute;

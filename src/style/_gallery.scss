@@ -58,6 +58,13 @@
       justify-content: center;
       align-items: center;
       z-index: 3;
+      cursor: pointer;
+      @include transition;
+      @media(hover:hover){
+        &:hover{
+          background-color: #DFB05C;
+        }
+      }
     }
     @media(max-width:700px){
       height: 270px;

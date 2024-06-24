@@ -108,5 +108,11 @@
     margin-top: 8px;
     height: 50px;
   }
+  @media(hover:hover){
+    &:hover{
+      background-color: #CAA769;
+      color: #FFFFFF !important;
+    }
+  }
   }
 }

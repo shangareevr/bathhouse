@@ -112,6 +112,7 @@
     align-items: center;
     text-transform: uppercase;
     background-color: $gold;
+    @include transition;
     @media(max-width:700px){
       height: 50px;
       max-width: calc(100% - 40px);
@@ -119,6 +120,11 @@
     }
     @media(max-width:500px){
       width: 100%;
+    }
+    @media(hover:hover){
+      &:hover{
+        background-color: #DFB05C;
+      }
     }
   }
   &__gradient{
