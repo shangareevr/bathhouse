@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header header__gradient">
     <div class="header__wrapper">
       <div class="header__left">
         <div class="header__menu">
@@ -70,7 +70,7 @@
         </div>
         <a href="./index.html" class="header__logo">
           <img class="header__logo_white" src="./img/logo.svg" alt="Новомостовые бани">
-
+          <img class="header__logo_blue" src="./img/logo_blue.svg" alt="Новомостовые бани">
         </a>
       </div>
       <a href="./index.html" class="header__logo_mob">
@@ -633,5 +633,32 @@
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=49a7f788-a546-4861-9bc1-0c9fafec39ea&lang=ru_RU"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded',()=>{  
+  ymaps.ready(function () {
+    ymaps.ready(init);
+
+function init () {
+    var map = new ymaps.Map('map', {
+            center: [54.716481, 55.950750],
+            zoom: 16
+        }, {
+          
+        })
+        map.behaviors.disable('scrollZoom'); 
+        var MyBalloonLayoutPlanet = ymaps.templateLayoutFactory.createClass(
+          '<div class="map__icon" style="max-width:141px; max-height: 141px; min-width:70px; min-height: 70px; width:10vw; height:10vw; border-radius:50%; display:flex; justify-content: center; align-items:center; background-color:#5281A1;">'+ 
+            '<img style="max-width:82px; max-height: 82px; min-width:40px; min-height: 40px; width:60%; height:60%;" src="./img/logo_map.svg"></div>')
+
+      const myPlacemarkPlanet = new ymaps.Placemark([54.716481, 55.950750], {}, {
+        iconLayout:MyBalloonLayoutPlanet,
+      });
+        
+    map.geoObjects.add(myPlacemarkPlanet);
+
+}
+  })
+})
+  </script>
 </body>
 </html>

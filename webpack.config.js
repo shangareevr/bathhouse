@@ -17,7 +17,16 @@ module.exports = {
     hot: true,
   },
   entry:{
+    about: path.resolve(__dirname, 'src', 'about.js'),
     index: path.resolve(__dirname, 'src', 'index.js'),
+    team: path.resolve(__dirname, 'src', 'team.js'),
+    contacts: path.resolve(__dirname, 'src', 'contacts.js'),
+    payment: path.resolve(__dirname, 'src', 'payment.js'),
+    partners:path.resolve(__dirname, 'src', 'partners.js'),
+    review:path.resolve(__dirname, 'src', 'partners.js'),
+    questions:path.resolve(__dirname, 'src', 'questions.js'),
+    news:path.resolve(__dirname, 'src', 'news.js'),
+    novost:path.resolve(__dirname, 'src', 'novost.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -27,10 +36,59 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'about.html'),
+      filename: 'about.html',
+			chunks: ['about'],
+		}),
+    new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src', 'index.html'),
       filename: 'index.html',
 			chunks: ['index'],
-		}),    
+		}),
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'team.html'),
+      filename: 'team.html',
+			chunks: ['team'],
+		}), 
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'contacts.html'),
+      filename: 'contacts.html',
+			chunks: ['contacts'],
+		}),
+
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'payment.html'),
+      filename: 'payment.html',
+			chunks: ['payment'],
+		}),   
+
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'partners.html'),
+      filename: 'partners.html',
+			chunks: ['partners'],
+		}),   
+
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'review.html'),
+      filename: 'review.html',
+			chunks: ['review'],
+		}),   
+
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'questions.html'),
+      filename: 'questions.html',
+			chunks: ['questions'],
+		}),   
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'news.html'),
+      filename: 'news.html',
+			chunks: ['news'],
+		}),
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'novost.html'),
+      filename: 'novost.html',
+			chunks: ['novost'],
+		}), 
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

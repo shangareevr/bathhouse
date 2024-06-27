@@ -1,7 +1,38 @@
 .header{
+  .header__logo_white{
+    display: none;
+  }
+  .header__logo_blue{
+    display: inline-block;
+  }
+  a,p{
+    color: #303030;
+  }
+  &__gradient{
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    a,p{
+      color: #ffffff;
+    }
+    .header__logo_blue{
+      display: none;
+    }
+    .header__logo_white{
+      display: inline-block;
+    }
+    .header__burger{
+      span{
+        background-color: #ffffff;
+        &::after,
+        &::before{
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
   position: relative;
   z-index: 3;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+
+
   &__wrapper{
     max-width: 1920px;
     margin: 0 auto;
@@ -63,7 +94,7 @@
       width: 22px;
       display: block;
       height: 2px;
-      background-color: $base;
+      background-color: #CAA769;
       position: relative;
       border-radius: 2px;
       @include transition;
@@ -73,7 +104,7 @@
         position: absolute;
         display: block;
         width: 100%;
-        background-color: $base;
+        background-color: #CAA769;
         height: 2px;
         @include transition;
       }
@@ -86,7 +117,7 @@
     }
     &.active{
       span{
-        background-color: $ligth;
+        background:none !important;
       &:before{
         @include transition;
         background-color: $gold;
@@ -103,10 +134,10 @@
     }
     @media(max-width:700px){
       span{
-        background-color: $gold;
+        background-color: $gold !important;
         &::after,
         &::before{
-          background-color: $gold;
+          background-color: $gold !important;
         }
       }
     }
