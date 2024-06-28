@@ -130,6 +130,39 @@ document.addEventListener('DOMContentLoaded', ()=>{
   $('.page__btns').click(function(){
     $(this).toggleClass('show');
   })
+  $('.review__imgs').slick({
+    speed: 1000,
+    fade: false,
+    cssEase: 'linear',
+    autoplay: false,
+    arrows: false,
+    variableWidth:true,
+    centerMode:false,
+    centerPadding:0,
+    slidesToShow:9,
+    infinite:false,
+    responsive: [
+      {
+          breakpoint: 1400,
+          settings: {
+              slidesToShow: 5,
+              infinite: false,
+          }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+            slidesToShow: 2,
+            infinite: false,
+        }
+    }
+  ]
+  });
+
+
+
+
+  
   // Fancybox.bind('[data-fancybox="about"]'),({
     //   arrows: false,
     //   afterLoad: function(instance, current) {

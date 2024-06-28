@@ -4,11 +4,17 @@
    max-width: 1920px;
    padding: 0 40px;
    margin-top: 143px;
+   &_bottom{
+    margin-bottom: 150px;
+   }
    @media (max-width: 1600px) {
     padding: 0 20px;
     }
     @media (max-width: 1200px) {
       margin-top: 45px;
+      &_bottom{
+        margin-bottom: 0px;
+       }
     }
   }
   &__title{

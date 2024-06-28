@@ -27,6 +27,7 @@ module.exports = {
     questions:path.resolve(__dirname, 'src', 'questions.js'),
     news:path.resolve(__dirname, 'src', 'news.js'),
     novost:path.resolve(__dirname, 'src', 'novost.js'),
+    bonus:path.resolve(__dirname, 'src', 'bonus.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -88,6 +89,11 @@ module.exports = {
 			template: path.resolve(__dirname, 'src', 'novost.html'),
       filename: 'novost.html',
 			chunks: ['novost'],
+		}), 
+    new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src', 'bonus.html'),
+      filename: 'bonus.html',
+			chunks: ['bonus'],
 		}), 
     new MiniCssExtractPlugin({
       filename: '[name].css',
